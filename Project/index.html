@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Restaurent</title>   
+</head>
+<body>
+    <header class="container-fluid sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg container d-flex justify-content-between align-items-center py-3">
+            <!-- Logo -->
+            <a class="navbar-brand"><img src="assets/images/logo.svg" alt="logo"></a>
+            
+            <!-- Toggler button for mobile view -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navigation links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold mx-2 black" href="#">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold mx-2 black" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold mx-2 black" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold mx-2 black" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="hero container">
+        <div class="row mx-auto align-items-center">
+            <!-- Left Column: Text Content -->
+            <div class="col-lg-6">
+                <p class="fw-bold text-black">WELCOME TO OUR</p>
+                <h1 class="bakilda fw-bold">Epicurean Restaurant <br> & Enjoy Our Food</h1>
+                <p class="text-gray-600">You need to be sure there isn't anything embarrassing hidden in the middle of text. Lorem Ipsum has been the industry's standard dummy text ever since the starting.</p>
+                <button class="btncolor">EXPLORE OUR MENU</button>
+                <div class="menus d-flex">
+                    <img class="active img-fluid mx-2" src="assets/images/hero/hero-1.png" alt="Menu 1" class="me-2">
+                    <img class="img-fluid mx-2" src="assets/images/hero/hero-2.png" alt="Menu 2" class="me-2">
+                    <img class="img-fluid mx-2" src="assets/images/hero/hero-3.png" alt="Menu 3">
+                    <button onclick="changeHero(this.parentElement)" class="menu-btn flex justify-content-center align-items-center"><i class="fa-solid fa-angle-right"></i></button>
+                </div>
+            </div>
+            <!-- Right Column: Image -->
+            <div class="col-lg-6">
+                <img id="hero-img" src="assets/images/hero/hero-1.png" alt="Hero Image" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    <div class="counter container-fluid">
+        <div class="container row mx-auto pb-4">
+            <div class="col-lg-3 mt-5 bakilda ct">
+                <h2 class="text-white display-1 text-center">
+                    <span class="counter-value" data-count="15">0</span><span>+</span>
+                </h2>
+                <p class="h3 text-white text-center">Year Experience</p>
+            </div>
+            <div class="col-lg-3 mt-5 bakilda ct">
+                <h2 class="text-white display-1 text-center">
+                    <span class="counter-value" data-count="5">0</span><span>+</span>
+                </h2>
+                <p class="h3 text-white text-center">Master Chefs</p>
+            </div>
+            <div class="col-lg-3 mt-5 bakilda ct">
+                <h2 class="text-white display-1 text-center">
+                    <span class="counter-value" data-count="200">0</span><span>+</span>
+                </h2>
+                <p class="h3 text-white text-center">Daily Visitors</p>
+            </div>
+            <div class="col-lg-3 mt-5 bakilda ct">
+                <h2 class="text-white display-1 text-center">
+                    <span class="counter-value" data-count="35">0</span><span>+</span>
+                </h2>
+                <p class="h3 text-white text-center">Achievements</p>
+            </div>
+        </div>
+    </div>
+    <div class="chefs container">
+        <p class="text-center orange fw-semibold txtsec">Our Experts</p>
+        <h1 class="bakilda text-center">Meet Our Chefs</h1>
+        <div class="chef-img row justify-content-between">
+            <div class="col-lg-4  position-relative">
+                <div class="chef-img-container position-relative">
+                    <img style="cursor: pointer;" src="assets/images/chef/chef-1.png" alt="" class="img-fluid mx-2">
+                    <div class="chef-overlay position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center">
+                        <p class="text-white">Chef John Doe is an expert in Italian cuisine with over 15 years of experience.</p>
+                    </div>
+                </div>
+                <div class="chef-name mt-2 p-2 text-center w-100 bg-white">
+                    <p class="mb-0 bakilda h5 text-center fw-semibold">Chef John Doe</p>
+                    <p class="chef-role text-center fw-semibold">Chief Master Chef</p>
+                </div>
+            </div>
+            <div class="col-lg-4 position-relative">
+                <div class="chef-img-container position-relative">
+                    <img style="cursor: pointer;" src="assets/images/chef/chef-2.png" alt="" class="img-fluid mx-2">
+                    <div class="chef-overlay position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center">
+                        <p class="text-white">Chef Jane Smith specializes in French patisserie and has won numerous awards.</p>
+                    </div>
+                </div>
+                <div class="chef-name mt-2 p-2 text-center w-100 bg-white">
+                    <p class="mb-0 bakilda h5 text-center fw-semibold">Chef Jane Smith</p>
+                    <p class="chef-role text-center fw-semibold">Executive Chef</p>
+                </div>
+            </div>
+            <div class="col-lg-4 position-relative">
+                <div class="chef-img-container position-relative">
+                    <img style="cursor: pointer;" src="assets/images/chef/chef-3.png" alt="" class="img-fluid mx-2">
+                    <div class="chef-overlay position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center">
+                        <p class="text-white">Chef Alex Johnson is known for his fusion dishes that combine Asian and Western flavors.</p>
+                    </div>
+                </div>
+                <div class="chef-name mt-2 p-2 text-center w-100 bg-white">
+                    <p class="mb-0 bakilda h5 text-center fw-semibold">Chef Alex Johnson</p>
+                    <p class="chef-role text-center fw-semibold">Executive Head Chef</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="testimonal">
+        <p class="text-center orange fw-semibold txtsec">Testimonals</p>
+        <h1 class="bakilda text-center">What Client Says</h1>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="test-1 text-center mx-auto">
+                    <img id="test-img" src="assets/images/testimonal/testimonial-1.png" alt="">
+                    <h3 id="test-name">Amanda Mortan</h3>
+                    <p id="test-role">Head manager, Slack</p>
+                    <div class="star">
+                        <i class="fa-solid fa-star yellow"></i>
+                        <i class="fa-solid fa-star yellow"></i>
+                        <i class="fa-solid fa-star yellow"></i>
+                        <i class="fa-solid fa-star yellow"></i>
+                        <i class="fa-solid fa-star yellow"></i>
+                    </div>
+                    <p id="test-feed" class="mt-3 h3 fw-semibold gray">Everything was so nice. Food was really great as they say. Easy to order, great service, and whole environment was very unique. Happy to make a visit in Epicurean.</p>
+                </div>
+                <div class="carousal-btn">
+                    <button id="1" onclick="changeCarousel(this.id)" class="active"></button>
+                    <button id="2" onclick="changeCarousel(this.id)"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact-us container">
+        <h1 class="bakilda text-center mb-5">Contact Us</h1>
+        <div class="row">
+            <div class="col-lg-6">
+                <form action="" onsubmit="handleForm(event)">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="input-group flex-nowrap">
+                                <span class="input-group-text border border-end-0 border-secondary-subtle" id="addon-wrapping"><i class="fa-solid fa-user"></i></span>
+                                <input type="text" class="form-control border border-secondary-subtle" placeholder="First Name" name="fname" aria-label="Username" aria-describedby="addon-wrapping" required>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control border border-secondary-subtle" id="exampleFormControlInput1" name="lname" placeholder="Last name" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group mb-3 mt-4">
+                            <span class="input-group-text border border-secondary-subtle" id="basic-addon1"><i class="fa-solid fa-envelope"></i></span>
+                            <input type="email" class="form-control border border-secondary-subtle" placeholder="Email" name="email" aria-label="Username" aria-describedby="basic-addon1" required>
+                          </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text border border-secondary-subtle" id="basic-addon1"><i class="fa-solid fa-phone"></i></span>
+                            <input type="number" class="form-control border border-secondary-subtle" placeholder="Phone" name="phone" aria-label="Username" aria-describedby="basic-addon1" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <textarea style="resize: none; height: 100px; width: 95%;" name="message" id="message" class="form-control border border-secondary-subtle mx-auto" placeholder="Message Here" required></textarea>
+                    </div>
+                    <div class="d-flex justify-content-center mx-auto mt-4">
+                        <button style="width: 70%;" class="btncolor">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-6">
+                <img class="img-fluid rounded mt-3" src="assets/images/discount.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid bg-black">
+        <div class="container row mx-auto py-4">
+            <div class="col-lg-3">
+                <h2 class="text-white fw-bold footer-title">Product</h2>
+                <ul class="list-unstyled footer-link">
+                    <li><a class="" href="#">Breakfast</a></li>
+                    <li><a class="" href="#">Lunch</a></li>
+                    <li><a class="" href="#">Desserts</a></li>
+                    <li><a class="" href="#">Dinner</a></li>
+                    <li><a class="" href="#">Book a table</a></li>
+                    <li><a class="" href="#">Our Chef</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <h2 class="text-white fw-bold footer-title">Information</h2>
+                <ul class="list-unstyled footer-link">
+                    <li><a class="" href="#">FAQ</a></li>
+                    <li><a class="" href="#">Blog</a></li>
+                    <li><a class="" href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <h2 class="text-white fw-bold footer-title">Company</h2>
+                <ul class="list-unstyled footer-link">
+                    <li><a class="" href="#">About us</a></li>
+                    <li><a class="" href="#">Our Menu</a></li>
+                    <li><a class="" href="#">Contact us</a></li>
+                    <li><a class="" href="#">Epicurean</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <h2 class="text-white fw-bold footer-title">Guest Service</h2>
+                <ul class="list-unstyled footer-link">
+                    <li><a href="#">Table Reservations</a></li>
+                    <li><a href="#">Private Dining</a></li>
+                    <li><a href="#">Catering Services</a></li>
+                    <li><a href="#">Gift Cards</a></li>
+                </ul>
+            </div>
+            <hr style="width: 100%; border: 1px solid #fff;">
+            <div class="container d-flex flex-lg-row flex-column justify-content-between align-items-center">
+                <div class="logo col-lg-4 col-12 mb-3 mb-lg-0 ">
+                    <img class="" src="assets/images/logo-two.svg" alt="">
+                </div>
+                <div class="middle col-lg-4 col-12 mb-3 mb-lg-0">
+                    <ul class="list-unstyled footer-link d-flex flex-lg-row flex-column align-items-center mt-4 mt-lg-4 ms-5">
+                        <li class="px-2"><a href="#">Terms</a></li>
+                        <li class="px-2"><a href="#">Privacy</a></li>
+                        <li class="px-2"><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+                <div class="social text-white col-lg-4 col-12 text-center">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
